@@ -1,0 +1,32 @@
+create wowrkspace:
+    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+    npm create tauri-app@latest
+    npm i
+    npm run dev
+
+runn app:
+    node server.js
+    npm run tauri dev
+
+rebuild after push:
+    pnpm install
+    rustup show
+    pnpm tauri dev
+    pnpm tauri build
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+npm create tauri-app@latest
+(cd to project directory)
+npm i
+npm install --save-dev @sveltejs/adapter-static
+npm install @tauri-apps/plugin-fs
+npm add @tauri-apps/plugin-fs
+npm run tauri add fs
+npm run tauri dev
+
+SHOW DATABASES;
+USE chat_db;
+SHOW TABLES;
+DESCRIBE chats;
+
+SELECT * FROM chats ORDER BY timestamp DESC;
